@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Sprint1') {
             steps {
-                echo 'Sprint 1 build started...'
+                echo 'Sprint 1 build started.....'
                 // Add your test commands here
             }
         }
