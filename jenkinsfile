@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Master') {
+            steps {
+                echo 'Master branch build started...'
+                // Add your build commands here
+            }
+        }
+        stage('Sprint1') {
+            steps {
+                echo 'Sprint 1 build started...'
+                // Add your test commands here
+            }
+        }
+        stage('hotfix') {
+            steps {
+                echo 'hotfix build started...'
+                // Add your deployment commands here
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'This will always run after the pipeline completes.'
+        }
+        success {
+            echo 'This will run only if the pipeline succeeds.'
+        }
+        failure {
+            echo 'This will run only if the pipeline fails.'
+        }
+    }
+}
