@@ -16,7 +16,7 @@ pipeline {
         }
         stage('hotfix') {
             steps {
-                echo 'hotfix build started...'
+                echo 'hotfix build started....'
                 // Add your deployment commands here
             }
         }
